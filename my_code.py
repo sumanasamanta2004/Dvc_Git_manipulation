@@ -11,10 +11,11 @@ data = [
 df = pd.DataFrame(data)
 
 # Step 3: Add a new column with values
-#df["Gender"] = ["Male", "Male","Male"]
-#df["GF1"] = ["Shrouti","Riya", "Piya"]
+df["Gender"] = ["Male", "Male", "Male"]
+# df["GF1"] = ["Shrouti", "Riya", "Piya"]
 
-# Step 4: Save to CSV file
-df.to_csv("people.csv", index=False)
+# Step 4: Save to CSV file in specified directory
+file_path = r"E:\Code_practice\datasets\people.csv"
+df.to_csv(file_path, index=False)
 
-print("CSV file 'people.csv' created successfully with 'Gender' column.")
+print(f"CSV file saved successfully at '{file_path}'")
